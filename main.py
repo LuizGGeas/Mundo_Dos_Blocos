@@ -27,7 +27,7 @@ class Bloco:
             f2.v1 = self.v1
             f2.v2 = self.v2
             f2.v3 = self.v3
-            f2.v3.append(self.v1.pop())
+            f2.v3.append(f2.v1.pop())
             f.append(f1)
             f.append(f2)
         elif (len(self.v2) == 3):
@@ -42,7 +42,7 @@ class Bloco:
             f2.v1 = self.v1
             f2.v2 = self.v2
             f2.v3 = self.v3
-            f2.v3.append(self.v2.pop())
+            f2.v3.append(f2.v2.pop())
             f.append(f1)
             f.append(f2)
         elif(len(self.v3) == 3):
@@ -57,7 +57,7 @@ class Bloco:
             f2.v1 = self.v1
             f2.v2 = self.v2
             f2.v3 = self.v3
-            f2.v2.append(self.v3.pop())
+            f2.v2.append(f2.v3.pop())
             f.append(f1)
             f.append(f2)
         elif(len(self.v1) == 2):
@@ -84,7 +84,7 @@ class Bloco:
                 f4.v1 = self.v1
                 f4.v2 = self.v2
                 f4.v3 = self.v3
-                f4.v3.append(f3.v1.pop())
+                f4.v3.append(f4.v1.pop())
                 f.append(f1)
                 f.append(f2)
                 f.append(f3)
@@ -101,7 +101,7 @@ class Bloco:
                 f2.v1 = self.v1
                 f2.v2 = self.v2
                 f2.v3 = self.v3
-                f2.v1.append(f1.v3.pop())
+                f2.v1.append(f2.v3.pop())
                 f3 = Bloco()
                 f3.pai = self
                 f3.v1 = self.v1
@@ -142,7 +142,7 @@ class Bloco:
                 f4.v1 = self.v1
                 f4.v2 = self.v2
                 f4.v3 = self.v3
-                f4.v2.append(f3.v1.pop())
+                f4.v2.append(f4.v1.pop())
                 f.append(f1)
                 f.append(f2)
                 f.append(f3)
@@ -159,7 +159,7 @@ class Bloco:
                 f2.v1 = self.v1
                 f2.v2 = self.v2
                 f2.v3 = self.v3
-                f2.v1.append(f1.v3.pop())
+                f2.v1.append(f2.v3.pop())
                 f3 = Bloco()
                 f3.pai = self
                 f3.v1 = self.v1
@@ -200,7 +200,7 @@ class Bloco:
                 f4.v1 = self.v1
                 f4.v2 = self.v2
                 f4.v3 = self.v3
-                f4.v2.append(f3.v3.pop())
+                f4.v2.append(f4.v3.pop())
                 f.append(f1)
                 f.append(f2)
                 f.append(f3)
@@ -217,7 +217,7 @@ class Bloco:
                 f2.v1 = self.v1
                 f2.v2 = self.v2
                 f2.v3 = self.v3
-                f2.v1.append(f1.v3.pop())
+                f2.v1.append(f2.v3.pop())
                 f3 = Bloco()
                 f3.pai = self
                 f3.v1 = self.v1
@@ -246,31 +246,31 @@ class Bloco:
             f2.v1 = self.v1
             f2.v2 = self.v2
             f2.v3 = self.v3
-            f2.v1.append(f1.v3.pop())
+            f2.v1.append(f2.v3.pop())
             f3 = Bloco()
             f3.pai = self
             f3.v1 = self.v1
             f3.v2 = self.v2
             f3.v3 = self.v3
-            f3.v2.append(f1.v1.pop())
+            f3.v2.append(f3.v1.pop())
             f4 = Bloco()
             f4.pai = self
             f4.v1 = self.v1
             f4.v2 = self.v2
             f4.v3 = self.v3
-            f4.v2.append(f1.v3.pop())
+            f4.v2.append(f4.v3.pop())
             f5 = Bloco()
             f5.pai = self
             f5.v1 = self.v1
             f5.v2 = self.v2
             f5.v3 = self.v3
-            f5.v3.append(f1.v1.pop())
+            f5.v3.append(f5.v1.pop())
             f6 = Bloco()
             f6.pai = self
             f6.v1 = self.v1
             f6.v2 = self.v2
             f6.v3 = self.v3
-            f6.v3.append(f1.v2.pop())
+            f6.v3.append(f6.v2.pop())
             f.append(f1)
             f.append(f2)
             f.append(f3)
