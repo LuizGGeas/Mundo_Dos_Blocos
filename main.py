@@ -234,7 +234,7 @@ class Bloco:
                 f.append(f2)
                 f.append(f3)
                 f.append(f4)
-        else:
+        elif len(self.v1) == 1 and len(self.v2) == 1 and len(self.v3) == 1:
             f1 = Bloco()
             f1.pai = self
             f1.v1 = self.v1
@@ -286,22 +286,22 @@ bl = Bloco()
 bl.init()
 total.append(bl)
 
-while(total[0].v1 != final || total[0].v2 != final || total[0].v3 != final){
-    for i in total[0].poss()
+while(total[0].v1 != final or total[0].v2 != final or total[0].v3 != final):
+    posss = total[0].poss()
+    for i in posss:
         k = 0
-        for j in fechado
+        for j in fechado:
             if i.v1 == j.v1 and i.v2 == j.v2 and i.v3 == j.v3:
                 k = 1
         if k == 0:
             total.append(i)
     fechado.append(total.pop(0))
-}
 
 
     
 finalmente = []
 finalmente.append[total[0]]
-while(finalmente[len(finalmente)-1].pai != None)
+while(finalmente[len(finalmente)-1].pai != None):
     finalmente.append(finalmente[len(finalmente)].pai)
-for i in reversed(finalmente)
+for i in reversed(finalmente):
     print(i)
