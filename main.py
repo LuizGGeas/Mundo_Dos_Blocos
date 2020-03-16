@@ -300,7 +300,7 @@ bl = Bloco()
 bl.init()
 total.append(bl)
 
-while not(total[0].v1 == final or total[0].v2 == final or total[0].v3 == final):
+while not(total[0].v2 == final):
     posss = total[0].poss()
     for i in posss:
         k = 0
@@ -310,12 +310,15 @@ while not(total[0].v1 == final or total[0].v2 == final or total[0].v3 == final):
         if k == 0:
             total.append(i)
     fechado.append(total.pop(0))
+print('fechados: ')
+for i in fechado:
+    print(f'p1: {i.v1}, p2: {i.v2}, p3: {i.v3}')
 
 
-    
+print('caminho final')
 finalmente = []
 finalmente.append(total[0])
 while(finalmente[len(finalmente)-1].pai != None):
     finalmente.append(finalmente[len(finalmente)-1].pai)
-for i in finalmente:
+for i in reversed(finalmente):
     print(f'p1: {i.v1} - p2: {i.v2} - p3: {i.v3}')
