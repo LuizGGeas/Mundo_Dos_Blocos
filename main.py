@@ -1,3 +1,9 @@
+#
+#autor: Luiz Gabriel
+#Código feito para obtenção de nota na matéria de Inteligência Artificial
+#Professor Andrei S
+#
+
 import random
 
 class Bloco:
